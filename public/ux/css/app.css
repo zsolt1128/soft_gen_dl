@@ -1,0 +1,74 @@
+.x-column-header-inner .x-column-header-text { 
+    white-space: normal; 
+}
+
+.icon-delete {
+    background-image:url('../images/icon-delete.png') !important;
+}
+
+.icon-help {
+    background-image:url('../images/icon-help.png') !important;
+}
+
+.x-grid-row.row-selectedpo > td {
+    background-color:#c1ddf1;
+}
+
+.my-panel .x-panel-header-body {
+      height: 24px;
+}
+
+.x-ie .my-panel .x-panel-header-body {
+    height: 24px;
+}
+
+.x-window-body-default {
+    border-style: none !important;
+}
+
+.x-panel-body {
+    border-style: none !important;
+}
+
+.x-menu-icon-separator-default {
+	border-left: none;
+}
+
+.x-toolbar-default {
+    border-style: none !important;
+}
+
+/*
+.x-chrome .x-form-text.x-form-focus {
+	display: inherit;
+}
+*/
+.x-grid-item-focused .x-grid-cell-inner:before {
+	border: none;
+}
+
+
+
+
+
+
+.x-menu-item-selected {
+	background-color:#c1ddf1;
+}
+
+.my-boundlist-item-menu {
+    padding: 0 6px;
+    line-height: 22px;
+    cursor: pointer;
+    cursor: hand;
+    position: relative;
+    zoom: 1;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: white;
+}
+
+.my-boundlist-item-menu:hover {
+    background: #D6E8F6;
+    border-color: #D6E8F6;
+}

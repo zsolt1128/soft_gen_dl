@@ -1,0 +1,7 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+zsvirsoft_softgenbundle:
+    resource: "@ZsVirSoftSoftGenBundle/Controller/"
+    type: annotation
+    prefix: /

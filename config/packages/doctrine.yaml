@@ -1,0 +1,32 @@
+parameters:
+    env(DATABASE_URL): ''
+doctrine:
+    dbal:
+        default_connection: soft_gen
+        connections:
+          soft_gen:
+            driver:   "%env(database_driver)%"
+            host:     "%env(database_host)%"
+            port:     "%env(database_port)%"
+            dbname:   "%env(database_name)%"
+            user:     "%env(database_user)%"
+            password: "%env(database_password)%"
+            charset:  UTF8
+            logging: false
+            profiling: false            
+          info_schema:
+            driver:   "%env(database_driver)%"
+            host:     "%env(database_host)%"
+            port:     "%env(database_port)%"
+            dbname:   "%env(database_name3)%"
+            user:     "%env(database_user)%"
+            password: "%env(database_password)%"
+            charset:  UTF8
+    orm:
+        default_entity_manager: soft_gen
+        auto_generate_proxy_classes: "%kernel.debug%"
+        entity_managers:
+            soft_gen:
+                connection: soft_gen
+                mappings:
+                    ZsVirSoftSoftGenBundle: ~
