@@ -1,7 +1,6 @@
 /.env
 .DS_Store
 .project
-# TODO az alább meggondolandó, le kellene generálni
 /config/jwt/*.pem
 # TODO .env.dist-ben módosítani a jelszót- ügyfelenként
 /var/
@@ -10,7 +9,7 @@
 /src/ZsVirSoft/SoftGenBundle/Controller/
 /public/bundles/zsvirsoftsoftgen/
 # TODO access control és hozzáférés tesztelés
-
+# TODO controller, js fájlok és generált fájlok átadása
 
 
 ###> symfony/webpack-encore-pack ###
