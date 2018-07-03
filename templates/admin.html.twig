@@ -10,7 +10,7 @@
 {%- set app_logo = app_logo  -%}
 		    <link rel="icon" type="image/x-icon" href="{{ asset('ux/' ~ app_logo ~ '.png') }}">
 			<link rel="stylesheet" href="{{ asset( 'ext-6.2.0/build/classic/theme-' ~ theme ~ '/resources/theme-' ~ theme ~ '-all.css') }}">
-		    <link rel="stylesheet" href="{{ asset( 'ext-6.2.0/examples/kitchensink/classic/resources/pictos/pictos.css') }}">
+		    <link rel="stylesheet" href="{{ asset( subdir ~ 'ext-6.2.0/examples/kitchensink/classic/resources/pictos/pictos.css') }}">
 		    <link rel="stylesheet" href="{{ asset( 'ux/css/app.css') }}">
 {% if amcsi is defined %}
 		    <script type="text/javascript"> var amcsi = "{{amcsi}}";</script>
