@@ -1,26 +1,30 @@
 The created MySoft application can be deployed according to the followings
 
-1. Requirements (the application was tested in the following environment)
-- PHP 7.2.2 or 7.2.4
-- MySQL community server 5.6.26 or 5.6.39
+1. Requirements
+- PHP 7.1 or higher (tested on PHP 7.2.2 and 7.2.4)
+- MySQL community server (tested with MySQL 5.6.26 and 5.6.39)
+- web server (tested on LiteSpeed 7.1)
 
-- LiteSpeed (.htaccess allowed, mod_rewrite enable)
-- Composer 1.1.1 or 1.6.5
-- Git 1.7.1 
+To upload the neccessary files:
+- Composer (tested with Composer 1.1.1 or 1.6.5)
+- Git (tested with Git 1.7.1) 
 
 2. Installation of the created system
 
 on your server:
 - cd <domain name's root directory>
-- git init
-- git clone https://zsolt1128@github.com/zsolt1128/soft_gen_dl.git	
+- git clone https://zsolt1128:Kamion73@github.com/zsolt1128/soft_gen_dl.git
 - cd soft_gen_dl
 - composer install
+- create the database with the given name, username, password
 
-on SoftGen webpage:
-- click filesToServer button
+in SoftGen system (Manual site):
+- click filesToServer button 
 
-.htaccess file
-ügyfél adatok:
-- base dir
-...
+
+TODO
+- db install új rendszerben
+- ajánlás a domain name's root directory-ban lévő .htaccess fájl tartalmára vonatkozóan
+
+apache configba
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1

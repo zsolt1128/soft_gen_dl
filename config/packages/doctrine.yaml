@@ -25,8 +25,13 @@ doctrine:
     orm:
         default_entity_manager: soft_gen
         auto_generate_proxy_classes: "%kernel.debug%"
-        entity_managers:
-            soft_gen:
-                connection: soft_gen
-                mappings:
-                    ZsVirSoftSoftGenBundle: ~
+        # auto_mapping: true
+        connection: soft_gen
+        mappings:
+            ZsVirSoftSoftGenBundle: ~
+        
+        # entity_managers:
+            # soft_gen:
+                # connection: soft_gen
+                # mappings:
+                    # ZsVirSoftSoftGenBundle: ~
