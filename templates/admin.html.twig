@@ -8,33 +8,26 @@
 {%- set sdkpath = 'ext-6.2.0/' -%}
 {%- set theme = theme  -%}
 {%- set app_logo = app_logo  -%}
-		    <link rel="icon" type="image/x-icon" href="{{ asset('ux/' ~ app_logo ~ '.png') }}">
-			<link rel="stylesheet" href="{{ asset( 'ext-6.2.0/build/classic/theme-' ~ theme ~ '/resources/theme-' ~ theme ~ '-all.css') }}">
-		    <link rel="stylesheet" href="{{ asset( 'ext-6.2.0/examples/kitchensink/classic/resources/pictos/pictos.css') }}">
-		    <link rel="stylesheet" href="{{ asset( 'ux/css/app.css') }}">
-
-{% if amcsi is defined %}
-		    <script type="text/javascript"> var amcsi = "{{amcsi}}";</script>
-{% endif %}
-			<script type="text/javascript"> var env = "{{app.environment}}";</script>
+		    <link rel="icon" type="image/x-icon" href="{{ asset( subdir ~ 'ux/' ~ app_logo ~ '.png') }}">
+			<link rel="stylesheet" href="{{ asset( subdir ~ 'ext-6.2.0/build/classic/theme-' ~ theme ~ '/resources/theme-' ~ theme ~ '-all.css') }}">
+		    <link rel="stylesheet" href="{{ asset( subdir ~ 'ext-6.2.0/examples/kitchensink/classic/resources/pictos/pictos.css') }}">
+		    <link rel="stylesheet" href="{{ asset( subdir ~ 'ux/css/app.css') }}">
 {% if app.environment == 'dev' %}
-			<script type="text/javascript" src="{{ asset( sdkpath  ~ 'build/ext-all.js') }}"></script>
-
-
-		    <script type="text/javascript" src="{{ asset( path ~ 'app-all.js') }}"></script>
+			<script type="text/javascript" src="{{ asset( subdir ~ sdkpath  ~ 'build/ext-all-debug.js') }}"></script>
+		    <script type="text/javascript" src="{{ asset( subdir ~ path ~ 'appx.js') }}"></script>
 		    <script type="text/javascript" >
 			Ext.onReady(function() {
 				Ext.state.Manager.setProvider(new Ext.state.LocalStorageProvider());
 			});
 		    </script>
 {% elseif app.environment == 'prod' %}
-			<script type="text/javascript" src="{{ asset( 'ext-6.2.0/build/ext-all.js') }}"></script>
+			<script type="text/javascript" src="{{ asset( subdir ~ 'ext-6.2.0/build/ext-all.js') }}"></script>
 		    <script type="text/javascript" >
 			Ext.onReady(function() {
 				Ext.state.Manager.setProvider(new Ext.state.LocalStorageProvider());
 			});
 		    </script>
-		    <script type="text/javascript" src="{{ asset( path ~ 'app.js') }}"></script>
+		    <script type="text/javascript" src="{{ asset( subdir ~ path ~ 'app-all.js') }}"></script>
 {% endif %}
 	</head>
 	<body>
